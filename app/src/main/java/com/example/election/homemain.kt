@@ -38,22 +38,6 @@ class homemain : Fragment() {
                 if (task.isSuccessful) {
                   var totalvote= task.result!!.size()
 
-                    db.collection("se_vote").orderBy("party_name", Query.Direction.DESCENDING).get()
-                        .addOnSuccessListener { documents ->
-                            for (document in documents) {
-
-                            }
-                        }
-
-                    fun countOccurrences(s: String, ch: Char): Int {
-                        return s.filter { it == ch }.count()
-                    }
-
-                    fun main() {
-                        val s = "Eeny, meeny, miny, moe"
-                        Toast.makeText(activity!!, (countOccurrences(s, 'e')).toString(), Toast.LENGTH_SHORT).show()
-                    }
-
 
                     var party1 = 2.00
                     party1=(party1/totalvote.toDouble())*100
