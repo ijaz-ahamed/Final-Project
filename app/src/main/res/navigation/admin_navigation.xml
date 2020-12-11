@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_navigation"
+    app:startDestination="@id/voters">
+
+    <fragment
+        android:id="@+id/voters"
+        android:name="com.example.election.Voters"
+        android:label="fragment_voters"
+        tools:layout="@layout/fragment_voters" >
+        <action
+            android:id="@+id/action_voters_self"
+            app:destination="@id/voters" />
+        <action
+            android:id="@+id/action_voters_to_party"
+            app:destination="@id/party" />
+    </fragment>
+    <fragment
+        android:id="@+id/candidates"
+        android:name="com.example.election.Candidate"
+        android:label="fragment_candidate"
+        tools:layout="@layout/fragment_candidate" >
+        <action
+            android:id="@+id/action_candidate_to_locations"
+            app:destination="@id/locations" />
+    </fragment>
+    <fragment
+        android:id="@+id/locations"
+        android:name="com.example.election.Locations"
+        android:label="fragment_locations"
+        tools:layout="@layout/fragment_locations" >
+        <action
+            android:id="@+id/action_locations_to_mnu_settings"
+            app:destination="@id/mnu_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/party"
+        android:name="com.example.election.Party"
+        android:label="fragment_party"
+        tools:layout="@layout/fragment_party" >
+        <action
+            android:id="@+id/action_party_to_candidates"
+            app:destination="@id/candidates" />
+    </fragment>
+    <fragment
+        android:id="@+id/mnu_settings"
+        android:name="com.example.election.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

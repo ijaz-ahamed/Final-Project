@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Party">
+
+    <EditText
+        android:id="@+id/SearchParty"
+        android:layout_width="386dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Search Party" />
+
+    <EditText
+        android:id="@+id/txtPartyName"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:hint="Party Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnImage"
+        android:layout_width="143dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Choose image"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/btnColor"
+        android:layout_width="143dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="395dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Choose color"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnInsertParty"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="460dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Insert Party"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnUpdateParty"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Update Party"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnDeleteParty"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Delete Party"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/ImgParty"
+        android:layout_width="148dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="270dp" />
+
+    <ImageView
+        android:id="@+id/imgColor"
+        android:layout_width="80dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="385dp" />
+
+    <ImageView
+        android:id="@+id/BtnSearchParty"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/search1" />
+
+</FrameLayout>

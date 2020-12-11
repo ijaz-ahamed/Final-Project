@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CandidateResults">
+
+    <TextView
+        android:id="@+id/txtCandidatedistrict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="district"
+        android:textAllCaps="false"
+        android:textColor="#314F8A"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/PBDCandidate1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/PBDCandidate1"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="88dp"
+        android:text="@string/Party1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/PBDCandidate2"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Party1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PBDCandidate1" />
+
+    <ProgressBar
+        android:id="@+id/PBDCandidate3"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/Party1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PBDCandidate2" />
+
+    <ProgressBar
+        android:id="@+id/PBDCandidate4"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/Party1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PBDCandidate3" />
+
+    <ProgressBar
+        android:id="@+id/PBDCandidate5"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/Party1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PBDCandidate4" />
+
+    <TextView
+        android:id="@+id/TxtDCandidate1"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Candidate1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDCandidate2"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="Candidate2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TxtDCandidate1" />
+
+    <TextView
+        android:id="@+id/txtDCandidate3"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Candidate3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDCandidate2" />
+
+    <TextView
+        android:id="@+id/txtDCandidate4"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:text="Candidate4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDCandidate3" />
+
+    <TextView
+        android:id="@+id/txtDCandidate5"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:text="Candidate5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDCandidate4" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

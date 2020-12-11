@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Locations">
+
+    <EditText
+        android:id="@+id/SearchDistrict"
+        android:layout_width="386dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Search District" />
+
+    <EditText
+        android:id="@+id/txtDistrictName"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:ems="10"
+        android:hint="District Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+
+    <Spinner
+        android:id="@+id/txtProvince"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="270dp"
+        android:entries="@array/Province"
+        android:textColor="#314F8A"
+        android:textSize="14sp" />
+
+
+    <Button
+        android:id="@+id/btnInsertDistrict"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="450dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Insert District"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnUpdateDistrict"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="510dp"
+        android:background="#314F8A"
+        android:text="Update District"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp"
+        />
+
+    <Button
+        android:id="@+id/btnDeleteDistrict"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="570dp"
+        android:background="#314F8A"
+        android:text="Delete District"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp"
+        />
+
+    <ImageView
+        android:id="@+id/BtnSearch"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/search1" />
+
+
+</FrameLayout>

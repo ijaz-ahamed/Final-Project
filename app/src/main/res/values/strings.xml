@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Election</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Linkregister"><u>Sign Up</u></string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="Party1">Party 1</string>
+    <string-array name="Province">
+        <item>Central province</item>
+        <item>Eastren province</item>
+        <item>Northen province</item>
+        <item>North central province</item>
+        <item>North western province</item>
+        <item>Sabaragamuwa province</item>
+        <item>Southern province</item>
+        <item>Uva province</item>
+        <item>Western province</item>
+    </string-array>
+    <string-array name="Category">
+        <item>By Party</item>
+        <item>By Candidate</item>
+
+    </string-array>
+
+    <string-array name="Active">
+        <item>Active</item>
+        <item>Inactive</item>
+
+    </string-array>
+
+    <string-array name="Users">
+        <item>admin</item>
+        <item>officer</item>
+        <item>user</item>
+
+    </string-array>
+
+    <string-array name="candidate">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+
+    </string-array>
+
+
+</resources>

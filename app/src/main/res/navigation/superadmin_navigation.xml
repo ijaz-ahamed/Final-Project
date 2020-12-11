@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/superadmin_navigation"
+    app:startDestination="@id/vote">
+
+    <fragment
+        android:id="@+id/vote"
+        android:name="com.example.election.Vote"
+        android:label="fragment_vote"
+        tools:layout="@layout/fragment_vote" >
+        <action
+            android:id="@+id/action_vote_to_adminuser"
+            app:destination="@id/adminuser" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminuser"
+        android:name="com.example.election.adminuser"
+        android:label="fragment_adminuser"
+        tools:layout="@layout/fragment_adminuser">
+        <action
+            android:id="@+id/action_adminuser_to_election"
+            app:destination="@id/election" />
+    </fragment>
+    <fragment
+        android:id="@+id/election"
+        android:name="com.example.election.Election"
+        android:label="fragment_election"
+        tools:layout="@layout/fragment_election" >
+        <action
+            android:id="@+id/action_election_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.election.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

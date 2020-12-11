@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DuplicateVoting">
+
+    <Button
+        android:id="@+id/btnAdminLogin"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="148dp"
+        android:background="#314F8A"
+        android:text="Login"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtAdminNIC"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="68dp"
+        android:background="#F8F5F5"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:hint="NIC"
+        android:inputType="text"
+        android:padding="10dp"
+        android:paddingLeft="1dp"
+        android:paddingTop="1dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="1dp"
+        android:shadowColor="#777272"
+        android:soundEffectsEnabled="true"
+        android:textColor="#314F8A"
+        android:textColorHint="#0E234E"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Settingsuser" />
+
+    <EditText
+        android:id="@+id/txtAdminPassword"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="76dp"
+        android:background="#FAF5F5"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="#314F8A"
+        android:textColorHint="#0E234E"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAdminLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdminNIC"
+        app:layout_constraintVertical_bias="0.976" />
+
+    <TextView
+        android:id="@+id/txtHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Sri Lanka Decides"
+        android:textAllCaps="false"
+        android:textColor="#314F8A"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Settingsuser"
+        android:layout_width="320dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="28dp"
+        android:background="#DA0404"
+        android:text="Duplicate NIC entry recorded  "
+        android:textAlignment="center"
+        android:textColor="#FFFDFD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHead" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

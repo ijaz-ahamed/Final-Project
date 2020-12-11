@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Voters">
+
+
+    <EditText
+        android:id="@+id/SearchVoter"
+        android:layout_width="386dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Search voter" />
+
+    <EditText
+        android:id="@+id/txtvoterNIC"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:hint="NIC Number"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtvoterpassword"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="290dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+
+    <EditText
+        android:id="@+id/txtvoterName"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="170dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/BtnInsertvoter"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Insert Voter"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnUpdatevoter"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Update Voter"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnDeletevoter"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="560dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Delete Voter"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Spinner
+        android:id="@+id/txtvoterDistrict"
+        android:layout_width="319dp"
+        android:layout_height="61dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginBottom="32dp"
+        android:textColor="#314F8A"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/BtnSearchvoter"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/search1" />
+</FrameLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adminuser">
+
+    <EditText
+        android:id="@+id/SearchAdmin"
+        android:layout_width="386dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="Search user"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/txtAdminNIC"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="220dp"
+        android:ems="10"
+        android:hint="NIC Number"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/txtAdminpassword"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="280dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+
+    <EditText
+        android:id="@+id/txtAdminName"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="160dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+
+    <EditText
+        android:id="@+id/txtAdminMobile"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="340dp"
+        android:ems="10"
+        android:hint="Mobile"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/BtnInsertAdmin"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="470dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Insert User"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnUpdateAdmin"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="525dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Update User"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/btnDeleteAdmin"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Delete User"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <Spinner
+        android:id="@+id/txtUserstype"
+        android:layout_width="319dp"
+        android:layout_height="61dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginBottom="32dp"
+        android:entries="@array/Users"
+        android:textColor="#314F8A"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/BtnSearchAdmin"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="350dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/search1" />
+
+</FrameLayout>

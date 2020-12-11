@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Vote">
+
+
+    <Button
+        android:id="@+id/Btnstartvote"
+        android:layout_width="320dp"
+        android:layout_height="51dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginBottom="32dp"
+        android:background="#314F8A"
+        android:text="Start voting"
+        android:textColor="#FAF5F5"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="251dp"
+        android:layout_height="196dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="120dp"
+        android:background="#FFFFFF"
+        android:src="@drawable/votee" />
+
+
+</FrameLayout>

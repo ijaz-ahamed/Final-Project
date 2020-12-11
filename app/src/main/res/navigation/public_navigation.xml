@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/public_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.election.homemain"
+        android:label="homemain"
+        tools:layout="@layout/homemain" >
+        <action
+            android:id="@+id/action_nav_home_self"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_home_to_mnu_results"
+            app:destination="@id/mnu_results" />
+    </fragment>
+    <fragment
+        android:id="@+id/mnu_results"
+        android:name="com.example.election.Results"
+        android:label="fragment_frg_results_list"
+        tools:layout="@layout/fragment_results" >
+        <action
+            android:id="@+id/action_mnu_results_to_mnu_prediction"
+            app:destination="@id/mnu_prediction" />
+    </fragment>
+    <fragment
+        android:id="@+id/mnu_prediction"
+        android:name="com.example.election.Prediction"
+        android:label="fragment_prediction"
+        tools:layout="@layout/fragment_prediction" >
+        <action
+            android:id="@+id/action_mnu_prediction_to_mnu_settings"
+            app:destination="@id/mnu_settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/mnu_settings"
+        android:name="com.example.election.settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>
