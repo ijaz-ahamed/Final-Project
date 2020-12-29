@@ -49,7 +49,11 @@ class adminuser : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
+
+        //creating a User object
         val User = User.create()
         User.user_nic = txtAdminNIC.text.toString()
         User.user_name = txtAdminName.text.toString()
@@ -58,6 +62,8 @@ class adminuser : Fragment() {
         User.user_password = txtAdminpassword.text.toString()
         User.user_role = txtUserstype.selectedItem.toString()
 
+
+        //Inserting a user to the database
         BtnInsertAdmin.setOnClickListener {
 
             val builder = AlertDialog.Builder(activity!!)
@@ -88,6 +94,7 @@ class adminuser : Fragment() {
                 .get()
                 .addOnSuccessListener { document ->
 
+                    //checking whether already the NIC is registered
                     if (document.getString("user_nic") != txtAdminNIC.text.toString()) {
                         db.collection("se_user").document(txtAdminNIC.text.toString())
                             .set(user)
@@ -128,6 +135,8 @@ class adminuser : Fragment() {
             alert.setTitle("Warning")
             alert.show()
         }
+
+        //Getting user data from database
         BtnSearchAdmin.setOnClickListener {
             val docRef = db.collection("se_user").document(SearchAdmin.text.toString())
             docRef.get()
@@ -146,6 +155,8 @@ class adminuser : Fragment() {
                 .addOnFailureListener { exception ->
                 }
         }
+
+        //Updating a user in the database
         btnUpdateAdmin.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to update this record?")
@@ -203,6 +214,8 @@ class adminuser : Fragment() {
 
 
                 }
+
+        //Deleting a user in the database
         btnDeleteAdmin.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to delete this record?")

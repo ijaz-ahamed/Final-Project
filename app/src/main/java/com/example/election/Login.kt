@@ -37,15 +37,22 @@ class Login : AppCompatActivity() {
 
         BtnLogin.setOnClickListener {
 
+            //defining database connection
             val db = FirebaseFirestore.getInstance();
+
+            //creating a User object
             val User = User.create()
 
+            //checking the user NIC
             val docRef = db.collection("se_user").document(TxtNIC.text.toString())
             docRef.get()
                 .addOnSuccessListener { document ->
+                    //Checking the user password
                     if (document.getString("user_password")==TxtPassword.text.toString()){
+                        //Checking the user role
                         if(document.getString("user_role")=="user"){
                             val intent = Intent(this, Homepage::class.java)
+                            //putting the user details into the intent
                             intent.putExtra("user_nic", document.getString("user_nic"))
                             intent.putExtra("user_role", document.getString("user_role"))
                             intent.putExtra("user_age", document.getLong("user_age"))
@@ -55,6 +62,7 @@ class Login : AppCompatActivity() {
                         }
                         else if (document.getString("user_role")=="officer"){
                             val intent = Intent(this, AdminActivity::class.java)
+                            //putting the user details into the intent
                             intent.putExtra("user_nic", document.getString("user_nic"))
                             intent.putExtra("user_role", document.getString("user_role"))
                             intent.putExtra("user_age", document.getLong("user_age"))
@@ -64,6 +72,7 @@ class Login : AppCompatActivity() {
                         }
                         else if (document.getString("user_role")=="admin"){
                             val intent = Intent(this, SuperadminActivity::class.java)
+                            //putting the user details into the intent
                             intent.putExtra("user_nic", document.getString("user_nic"))
                             intent.putExtra("user_role", document.getString("user_role"))
                             intent.putExtra("user_age", document.getLong("user_age"))

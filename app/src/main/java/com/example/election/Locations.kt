@@ -49,10 +49,13 @@ class Locations : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
 
+        //creating a District object
         val district = district.create()
 
+        //Inserting a District to the database
         btnInsertDistrict.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to insert this record?")
@@ -87,6 +90,8 @@ class Locations : Fragment() {
             alert.show()
 
         }
+
+        //Getting District data from database
         BtnSearch.setOnClickListener {
             val docRef = db.collection("se_district").document(SearchDistrict.text.toString())
             docRef.get()
@@ -103,6 +108,7 @@ class Locations : Fragment() {
                 }
         }
 
+        //Updating a District in the database
         btnUpdateDistrict.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to update this record?")
@@ -139,6 +145,7 @@ class Locations : Fragment() {
 
         }
 
+        //Deleting a District in the database
         btnDeleteDistrict.setOnClickListener{
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to delete this record?")

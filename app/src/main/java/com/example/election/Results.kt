@@ -56,8 +56,11 @@ class Results : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
         val DocRef = db.collection("se_district")
+
+        //populating district names to the list view
         val districts: MutableList<String?> = ArrayList()
         val adapter = ArrayAdapter(
             (activity!!),
@@ -74,12 +77,11 @@ class Results : Fragment() {
                 adapter.notifyDataSetChanged()
             }
         })
+
+        //getting the data of the selected item from the list view
         List_Districts.setOnItemClickListener(object : OnItemClickListener {
             override fun onItemClick(parent: AdapterView<*>, view: View, i: Int,
                                      id: Long) {
-                //val category = arrayOf<String>("By Party","By Candidate")
-                //val arrayAdapter = ArrayAdapter<String>(activity!!,android.R.layout.simple_list_item_1,category)
-                //List_Districts.adapter = arrayAdapter
                 val result_district = List_Districts.adapter.getItem(i).toString()
                 val intent = Intent(activity!!, result_prediction_type::class.java)
                 districtname=result_district

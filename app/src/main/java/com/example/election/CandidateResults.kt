@@ -12,7 +12,10 @@ class CandidateResults : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_candidate_results)
 
+        //retrieving the selected district name
         txtCandidatedistrict.setText("District : "+ districtname)
+
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
         db.collection("se_vote")
             .whereEqualTo("district_name", districtname).get()

@@ -20,7 +20,9 @@ class Register: AppCompatActivity() {
 
 
         btnRegister.setOnClickListener {
+            //defining database connection
             val db = FirebaseFirestore.getInstance();
+            //Creating a user object
             val User = User.create()
 
 

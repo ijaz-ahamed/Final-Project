@@ -53,10 +53,13 @@ class Voters : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
 
+        //Creating a voter object
         val voter = Voters.create()
 
+        //Populating the districts to the list view
         val DocRef = db.collection("se_district")
         val districts: MutableList<String?> = ArrayList()
         val adapter = ArrayAdapter(
@@ -76,7 +79,7 @@ class Voters : Fragment() {
             }
         })
 
-
+        //Inserting a voter to the database
         BtnInsertvoter.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to insert this record?")
@@ -138,6 +141,7 @@ class Voters : Fragment() {
             alert.show()
 
         }
+        //Getting the voter details from the database
         BtnSearchvoter.setOnClickListener {
             val docRef = db.collection("se_voter").document(SearchVoter.text.toString())
             docRef.get()
@@ -155,6 +159,8 @@ class Voters : Fragment() {
                 .addOnFailureListener { exception ->
                 }
         }
+
+        //Upadting the voter details in the database
         btnUpdatevoter.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to update this record?")
@@ -195,6 +201,8 @@ class Voters : Fragment() {
             alert.setTitle("Warning")
             alert.show()
         }
+
+        //Deleting the voter from the database
         btnDeletevoter.setOnClickListener{
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to delete this record?")

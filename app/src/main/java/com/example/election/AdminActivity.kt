@@ -26,7 +26,7 @@ class AdminActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_admin)
 
-
+        //getting the user details from login activity
         user_nic = intent.getStringExtra("user_nic").toString()
         user_role = intent.getStringExtra("user_role").toString()
         user_age = intent.getLongExtra("user_age",0).toInt()
@@ -36,7 +36,7 @@ class AdminActivity : AppCompatActivity() {
 
 
 
-
+        //setting fragments to admin navigation
         AdminNav.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_voter -> {

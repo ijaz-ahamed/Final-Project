@@ -22,8 +22,13 @@ class FinalVoting : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_final_voting)
 
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
+
+        //creating a Vote object
         val vote = Vote.create()
+
+        //populating party to the listview
         val DocP = db.collection("se_party")
         val party: MutableList<String?> = ArrayList()
         val partyadapter = ArrayAdapter(
@@ -43,6 +48,7 @@ class FinalVoting : AppCompatActivity() {
             }
         })
 
+        //getting the active election
         db.collection("se_election")
             .whereEqualTo("election_is_active", "Active")
             .get()
@@ -56,6 +62,7 @@ class FinalVoting : AppCompatActivity() {
 
             }
 
+        //Voting if every validation is successful
         btnFinalvote.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setMessage("Are you sure you want to vote to the Canidate:"+" "+voteCandidateNumber.selectedItem.toString()+" "+"of party:"+" "+voteParty.selectedItem.toString())
@@ -64,8 +71,11 @@ class FinalVoting : AppCompatActivity() {
                 .setPositiveButton("Yes", DialogInterface.OnClickListener {
                         dialog, id ->
 
+
                     vote.party_name = voteParty.selectedItem.toString()
                     vote.candidate_number = voteCandidateNumber.selectedItem.toString().toInt()
+
+                    //Getting the voter's NIC and district from the voter's login
                     district_name=intent.getStringExtra("district_name").toString()
                     voter_nic=intent.getStringExtra("voter_nic").toString()
 

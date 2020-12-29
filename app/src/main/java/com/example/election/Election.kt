@@ -47,12 +47,15 @@ class Election : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
+
+        //creating a Election object
         val election = Election.create()
 
 
 
+        //Inserting a election to the database
         btnInsertElection.setOnClickListener {
 
             val builder = AlertDialog.Builder(activity!!)
@@ -70,6 +73,7 @@ class Election : Fragment() {
                         "election_is_active" to election.election_is_active
                     )
 
+
                     db.collection("se_election").document(
                         txtElectionName.text.toString() + " " + txtElectionYear.text.toString()
                             .toInt()
@@ -77,6 +81,7 @@ class Election : Fragment() {
                         .get()
                         .addOnSuccessListener { document ->
 
+                            //checking whether already the election is entered
                             if (document.getString("election_type") != txtElectionName.text.toString()) {
                                 if (document.getString("election_year") != txtElectionYear.text.toString()) {
                                     db.collection("se_election").document(
@@ -131,6 +136,7 @@ class Election : Fragment() {
             alert.show()
         }
 
+        //Getting Election data from database
         BtnSearchelection.setOnClickListener {
             val docRef = db.collection("se_election").document(SearchElection.text.toString())
             docRef.get()
@@ -148,6 +154,7 @@ class Election : Fragment() {
                 }
         }
 
+        //Updating a Election in the database
         btnUpdateElection.setOnClickListener {
 
             val builder = AlertDialog.Builder(activity!!)
@@ -196,6 +203,7 @@ class Election : Fragment() {
             alert.show()
         }
 
+        //Deleting a Election in the database
         btnDeleteElection.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to delete this record?")

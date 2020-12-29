@@ -24,6 +24,7 @@ class Firstpage: AppCompatActivity() {
 
         mHandler = Handler()
 
+        //setting timer for the starting logo to get disappeared and to make the login page active
         mHandler.postDelayed(mRunnable, 3000)
 
 

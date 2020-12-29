@@ -56,9 +56,13 @@ class Party : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
+
+        //creating a Party object
         val party = Party.create()
+
+        //function to choose a image from the gallery
         fun openGalleryForImage() {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
@@ -70,6 +74,7 @@ class Party : Fragment() {
 
 
         btnImage.setOnClickListener {
+            //Choosing a image from the gallery and setting to the imageview
             openGalleryForImage()
              fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
                 super.onActivityResult(requestCode, resultCode, data)
@@ -81,7 +86,10 @@ class Party : Fragment() {
             }
 
         }
+
+
         btnColor.setOnClickListener{
+            //getting color from the color picker and setting to the party color
             val colorPicker = ColorPicker(activity)
             colorPicker.show()
             colorPicker.setOnChooseColorListener(object : OnChooseColorListener {
@@ -97,6 +105,8 @@ class Party : Fragment() {
                 }
             })
         }
+
+        //Inserting the party to the database
         btnInsertParty.setOnClickListener{
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to insert this record?")
@@ -116,6 +126,7 @@ class Party : Fragment() {
                         .get()
                         .addOnSuccessListener { document ->
 
+                            //checking whether already the party is entered
                             if (document.getString("party_name") != txtPartyName.text.toString()) {
 
                                 db.collection("se_party").document(txtPartyName.text.toString())
@@ -153,6 +164,8 @@ class Party : Fragment() {
             alert.setTitle("Warning")
             alert.show()
         }
+
+        //Getting Party data from database
         BtnSearchParty.setOnClickListener {
             val docRef = db.collection("se_party").document(SearchParty.text.toString())
             docRef.get()
@@ -166,6 +179,8 @@ class Party : Fragment() {
                 .addOnFailureListener { exception ->
                 }
         }
+
+        //Updating a Party in the database
         btnUpdateParty.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to update this record?")
@@ -202,6 +217,8 @@ class Party : Fragment() {
             alert.setTitle("Warning")
             alert.show()
         }
+
+        //Deleting a party in the database
         btnDeleteParty.setOnClickListener{
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to delete this record?")

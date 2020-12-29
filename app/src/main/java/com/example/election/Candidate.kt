@@ -44,10 +44,13 @@ class Candidate : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //defining database connection
         val db = FirebaseFirestore.getInstance();
 
+        //creating a Candidate object
         val candidate = Candidate.create()
 
+        //populating districts to the listview
         val DocRef = db.collection("se_district")
         val districts: MutableList<String?> = ArrayList()
         val adapter = ArrayAdapter(
@@ -67,6 +70,7 @@ class Candidate : Fragment() {
             }
         })
 
+        //populating party to the listview
         val DocP = db.collection("se_party")
         val party: MutableList<String?> = ArrayList()
         val partyadapter = ArrayAdapter(
@@ -87,6 +91,7 @@ class Candidate : Fragment() {
         })
 
 
+        //Checking the election's active status
         db.collection("se_election")
             .whereEqualTo("election_is_active", "Active")
             .get()
@@ -100,6 +105,7 @@ class Candidate : Fragment() {
 
             }
 
+        //Inserting a candidate to the database
         btnInsertCandidate.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to insert this record?")
@@ -125,7 +131,7 @@ class Candidate : Fragment() {
                     db.collection("se_candidate").document(txtCandidateNic.text.toString())
                         .get()
                         .addOnSuccessListener { document ->
-
+                            //checking whether already the NIC is registered
                             if (document.getString("candidate_nic") != txtCandidateNic.text.toString()) {
 
                                 db.collection("se_candidate").document(txtCandidateNic.text.toString())
@@ -165,6 +171,7 @@ class Candidate : Fragment() {
 
         }
 
+        //Getting candidate data from database
         BtnSearchcandidate.setOnClickListener {
             val docRef = db.collection("se_candidate").document(SearchCandidate.text.toString())
             docRef.get()
@@ -192,6 +199,7 @@ class Candidate : Fragment() {
                 }
         }
 
+        //Updating a candidate in the database
         btnUpdateCandidate.setOnClickListener {
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to update this record?")
@@ -236,6 +244,7 @@ class Candidate : Fragment() {
             alert.show()
         }
 
+        //Deleting a user in the database
         btnDeleteCandidate.setOnClickListener{
             val builder = AlertDialog.Builder(activity!!)
             builder.setMessage("Are you sure you want to delete this record?")

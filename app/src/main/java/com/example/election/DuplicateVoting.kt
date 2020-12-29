@@ -16,12 +16,20 @@ class DuplicateVoting : AppCompatActivity() {
 
         btnAdminLogin.setOnClickListener {
 
+            //defining database connection
             val db = FirebaseFirestore.getInstance();
+
+            //checking the admin's NIC
             val docRef = db.collection("se_user").document(txtAdminNIC.text.toString())
             docRef.get()
                 .addOnSuccessListener { document ->
+
+                    //Checking the admin's password
                     if (document.getString("user_password")==txtAdminPassword.text.toString()){
+
+                        //Checking the admin role
                         if(document.getString("user_role")=="admin"){
+                            //if the admin credentials provided the voting can be resumed again
                             val intent = Intent(this, VotingActivity::class.java)
                             startActivity(intent)
                         }
