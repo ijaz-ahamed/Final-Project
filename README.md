@@ -1,4 +1,5 @@
-# Final-Project
+# Final-Project 
+Mobile based election voting system
 
 Please use the below user accounts for the various functions
 
